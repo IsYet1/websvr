@@ -1,7 +1,9 @@
  var express = require("express");
  var app = express();
 
-app.use(express.static('dist'))
+ //Setup DIST folder
+ app.use(express.static('dist'));
+
  /* serves main page */
  app.get("/", function(req, res) {
     res.sendfile('dist/index.htm')
