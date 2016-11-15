@@ -3,7 +3,8 @@
 
  /* serves main page */
  app.get("/", function(req, res) {
-    res.sendfile('index.htm')
+    res.sendfile('dist')
+    // res.sendfile('../../ng/cli00/dist/index.html')
  });
 
   app.post("/user/add", function(req, res) { 
