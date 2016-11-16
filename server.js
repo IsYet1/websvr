@@ -1,27 +1,29 @@
- var express = require("express");
- var app = express();
+var express = require("express");
+var app = express();
 
- //Setup DIST folder
- app.use(express.static('dist'));
+var distPath = '../ng/OxyDof/dist'
 
- /* serves main page */
- app.get("/", function(req, res) {
-    res.sendfile('dist/index.htm')
-    // res.sendfile('../../ng/cli00/dist/index.html')
- });
+//Setup DIST folder
+app.use(express.static(distPath));
 
-  app.post("/user/add", function(req, res) { 
-	/* some server side logic */
-	res.send("OK");
-  });
+/* serves main page */
+app.get("/", function (req, res) {
+  res.sendfile(distPath + '/index.htm')
+  // res.sendfile('../../ng/cli00/dist/index.html')
+});
 
- /* serves all the static files */
- app.get(/^(.+)$/, function(req, res){ 
-     console.log('static file request : ' + req.params);
-     res.sendfile( __dirname + req.params[0]); 
- });
+app.post("/user/add", function (req, res) {
+  /* some server side logic */
+  res.send("OK");
+});
 
- var port = process.env.PORT || 5000;
- app.listen(port, function() {
-   console.log("Listening on " + port);
- });
+/* serves all the static files */
+app.get(/^(.+)$/, function (req, res) {
+  console.log('static file request : ' + req.params);
+  res.sendfile(__dirname + req.params[0]);
+});
+
+var port = process.env.PORT || 5000;
+app.listen(port, function () {
+  console.log("Listening on " + port);
+});

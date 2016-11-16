@@ -1,0 +1,29 @@
+{
+  "name": "websvr",
+  "version": "1.0.0",
+  "description": "Simple Web Server",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.14.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IsYet1/websvr.git"
+  },
+  "keywords": [
+    "web",
+    "server",
+    "simple"
+  ],
+  "author": "DM",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IsYet1/websvr/issues"
+  },
+  "homepage": "https://github.com/IsYet1/websvr#readme"
+}
