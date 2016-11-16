@@ -1,14 +1,18 @@
-From http://mfranc.com/node-js/node-js-simple-web-server-with-express/
+# Simple Web Server.
+## Origin 
+Started with code from [this page](http://mfranc.com/node-js/node-js-simple-web-server-with-express/)
 
-Simple Web Server.
+## To run a dist:
+* Set the _dist path_ relative to the current websvr path.  
 
-Start with:
-node server.js
+## Start with:
+    node server.js  
+    or  
+    npm start
 
-Notes:
-- Might not be the best implementation (but it runs)
-- Has get and post
 
-To run a dist:
-- Copy the dist folder as a subfolder
-- Change the start page to include the dist/ folder
+## Notes:
+* Might not be the best implementation (but it runs)
+*  Has get and post
+
+
